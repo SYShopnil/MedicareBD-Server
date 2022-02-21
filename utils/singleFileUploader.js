@@ -3,7 +3,7 @@ const fs = require("fs")
  
 const singleImageUploader = (file, extension, fileName) => {
     let config = {
-        dataUrl: `http://localhost:3030`, //set the default data url
+        dataUrl: process.env.SERVER_URL || `http://localhost:3030`, //set the default data url
         saveDirectory: `${__dirname}/../public`, //set the save directory of the data
         fileName //set the file name
     }
